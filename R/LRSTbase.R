@@ -1,7 +1,7 @@
 utils::globalVariables(c("Subject", "Treatment", "xm", "xs", "prob", "rt2d"))
 
 
-#' Title Generate Data for two outcomes.
+#' Title Generate Data for Multiple outcomes.
 #'
 #' @param xm A mean matrix with element (i,j) giving the mean of outcome i and time j.
 #' @param xs A s.d. matrix with element (i,j) giving the s.d. of outcome i and time j.

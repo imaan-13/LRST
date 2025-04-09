@@ -1,6 +1,6 @@
 library(MASS)
 
-#' Title
+#' Title Theoretical C and D matrix under assumption of Gaussianity
 #'
 #' @param xm Mean Matrix of Placebo
 #' @param ym Mean Matrix of Treatment
