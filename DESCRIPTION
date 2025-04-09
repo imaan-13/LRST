@@ -2,9 +2,11 @@ Package: LRST
 Type: Package
 Title: A R package for Longitudinal Rank Sum Test (LRST)
 Version: 0.1.0
-Author: Dhrubajyoti Ghosh 
+Author: Dhrubajyoti Ghosh, Xiaoming Xu, Sheng Luo 
 Maintainer: Dhrubajyoti Ghosh <dg302@duke.edu>
 Description: Tests efficacy of clinical trial by a U-statistics based approach to provide a testing procedure to compare placebo vs treatment in longitudinal data.
+URL: https://github.com/djghosh1123/LRST, https://djghosh1123.github.io/LRST
+BugReports: https://github.com/djghosh1123/LRST/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

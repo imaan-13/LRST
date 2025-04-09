@@ -142,7 +142,7 @@ sampSize = function(pi, xm, ym, alpha, C, D, lambda){
 
 
 
-#' Title
+#' Title Theoretical Relative Treatment Effect Size Under Gaussianity Assumption
 #'
 #' @param xm Placebo Mean
 #' @param ym Treatment Mean

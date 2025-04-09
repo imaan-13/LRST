@@ -2,7 +2,7 @@
 % Please edit documentation in R/Power.R
 \name{theta.bar.theo}
 \alias{theta.bar.theo}
-\title{Title}
+\title{Title Theoretical Relative Treatment Effect Size Under Gaussianity Assumption}
 \usage{
 theta.bar.theo(xm, ym, xs, n.iter = 1000)
 }
@@ -16,7 +16,7 @@ theta.bar.theo(xm, ym, xs, n.iter = 1000)
 \item{n.iter}{Number of iteartions}
 }
 \description{
-Title
+Title Theoretical Relative Treatment Effect Size Under Gaussianity Assumption
 }
 \examples{
 xm = -t(cbind(c(0, 0.738, 1.313, 3.109, 4.525, 5.864, 7.338),
