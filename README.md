@@ -1,15 +1,38 @@
-# Introduction
+# LRST: Longitudinal Rank-Sum Test for Multivariate Longitudinal Data
 
-The `LRST` package implements the Longitudinal Rank-Sum Test for
-analyzing longitudinal clinical trial data.
+The **LRST** R package implements the Longitudinal Rank-Sum Test, a
+nonparametric, rank-based omnibus test statistic designed for
+comprehensive assessment of treatment efficacy across multiple
+longitudinal primary endpoints in clinical trials. It effectively
+controls Type I error while enhancing statistical power, offering
+flexibility against various data distributions encountered in clinical
+research.
+
+## Key Features
+
+-   **Comprehensive Assessment**: Evaluates treatment effects across
+    multiple endpoints and time points without requiring multiplicity
+    adjustments.
+-   **Enhanced Statistical Power**: Effectively controls Type I error,
+    reducing the need for larger sample sizes.
+-   **Flexibility**: Robust against various data distributions, making
+    it suitable for complex clinical trial data.
+-   **Efficient Data Utilization**: Maximizes the use of longitudinal
+    data, capturing dynamic changes across multiple endpoints.
 
 # Installation
 
 You can install the package using:
 
     knitr::opts_chunk$set(echo = TRUE)
+    # install.packages("devtools")
+    devtools::install_github("djghosh1123/LRST")
+    #> Using GitHub PAT from the git credential store.
+    #> Skipping install of 'LRST' from a github remote, the SHA1 (406a0e07) has not changed since last install.
+    #>   Use `force = TRUE` to force installation
     library(LRST)
-    library(MASS)
+
+# Example
 
 The `lrst.2arm` function perform LRST on placebo and treatment data,
 while the `lrst.MultiArm` perform LRST on multi-arm clinical trials.
@@ -81,18 +104,18 @@ Let’s perform LRST on the generated data.
 
     lrst.2arm(X_c, Y_c)
     #> $T.stat
-    #> [1] 3.150061
+    #> [1] 1.080766
     #> 
     #> $T.sd
-    #> [1] 4.598027
+    #> [1] 4.800963
     #> 
     #> $p.value
-    #> [1] 0.07091118
+    #> [1] 0.3109178
 
 Let’s get the estimated power.
 
     estimated_Power(0.05, X_c, Y_c)
-    #> [1] 0.5138214
+    #> [1] 0.1274444
 
 Let’s conduct the Multi-Arm LRST.
 
@@ -106,10 +129,20 @@ Let’s conduct the Multi-Arm LRST.
     Y[[2]] = X_dose_2
     lrst.MultiArm(X_c, Y)
     #> $p
-    #> [1] 0.11167
+    #> [1] 0.07858
     #> 
     #> $v
-    #> [1] 1
+    #> [1] 2
     #> 
     #> $T
-    #> [1] 1.564431
+    #> [1] 1.730265
+
+# Citation
+
+If you use this paper, please cite:
+
+Xu, X., Ghosh, D., Luo, S., & CPP Integrated Parkinson’s Database.
+(2025). A novel longitudinal rank-sum test for multiple primary
+endpoints in clinical trials: Applications to neurodegenerative
+disorders. Statistics in Biopharmaceutical Research, (just-accepted),
+1-17.
