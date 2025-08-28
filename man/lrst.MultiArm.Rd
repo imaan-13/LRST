@@ -2,7 +2,7 @@
 % Please edit documentation in R/LRSTMulti.R
 \name{lrst.MultiArm}
 \alias{lrst.MultiArm}
-\title{Title Longitudinal Rank Sum test for multi-arm Clinical Trial}
+\title{Longitudinal Rank Sum test for multi-arm Clinical Trial}
 \usage{
 lrst.MultiArm(X_c, Y)
 }
@@ -21,7 +21,8 @@ A list containing:
 \item{T}{Final test Statistic}
 }
 \description{
-Title Longitudinal Rank Sum test for multi-arm Clinical Trial
+Performs a non-parametric U-statistic test to compare multiple treatment arms against a placebo
+using multivariate longitudinal outcome data. Returns the test statistic, p-value, and the selected arm.
 }
 \examples{
 library(MASS)
@@ -60,7 +61,6 @@ Y = vector(length = 2, mode = "list")
 Y[[1]] = X_dose_1
 Y[[2]] = X_dose_2
 lrst.MultiArm(X_c, Y)
-
 }
 \references{
 Ghosh, D., Luo, S. (2024). A non-parametric U-statistic testing approach for multi-arm clinical trials with multivariate longitudinal data. arXiv preprint arXiv:2408.10149.

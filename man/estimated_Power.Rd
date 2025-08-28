@@ -2,7 +2,7 @@
 % Please edit documentation in R/Power.R
 \name{estimated_Power}
 \alias{estimated_Power}
-\title{Title Estimate of Power from the data}
+\title{Estimate of Power from the data}
 \usage{
 estimated_Power(alpha = 0.05, X_c, Y_c)
 }
@@ -19,7 +19,7 @@ patients in the treatment group, K is the number of outcomes, and T is the numbe
 Estimated Power from the data
 }
 \description{
-Title Estimate of Power from the data
+Estimates the power of the longitudinal rank sum test using observed data instead of theoretical assumptions. Combines ranks and covariance estimation to calculate the test statistic.
 }
 \examples{
 library(MASS)

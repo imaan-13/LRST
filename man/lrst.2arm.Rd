@@ -2,7 +2,7 @@
 % Please edit documentation in R/LRSTuni.R
 \name{lrst.2arm}
 \alias{lrst.2arm}
-\title{Title Longitudinal Rank Sum Test for Two-Arm Clinical Trial (Placebo and Treatment)}
+\title{Longitudinal Rank Sum Test for Two-Arm Clinical Trial (Placebo and Treatment)}
 \usage{
 lrst.2arm(X_c, Y_c)
 }
@@ -22,7 +22,8 @@ A list containing:
 }
 }
 \description{
-Title Longitudinal Rank Sum Test for Two-Arm Clinical Trial (Placebo and Treatment)
+Performs a non-parametric rank-based test to compare a treatment group against a placebo
+using multivariate longitudinal outcome data. Returns the test statistic, its standard error, and the p-value.
 }
 \examples{
 library(MASS)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Power.R
 \name{theoretical_power}
 \alias{theoretical_power}
-\title{Title Theoretical Power when C and D are known}
+\title{Theoretical Power when C and D are known}
 \usage{
 theoretical_power(alpha = 0.05, effect_size, nx, ny, K, T, C, D)
 }
@@ -27,7 +27,7 @@ theoretical_power(alpha = 0.05, effect_size, nx, ny, K, T, C, D)
 Theoretical Power
 }
 \description{
-Title Theoretical Power when C and D are known
+Calculates the theoretical power of a longitudinal rank sum test when the covariance matrices𝐶and𝐷are known.
 }
 \examples{
 N = 500 # Total Number of Patients

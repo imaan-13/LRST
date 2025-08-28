@@ -2,7 +2,7 @@
 % Please edit documentation in R/LRSTuni.R
 \name{lmmFun4}
 \alias{lmmFun4}
-\title{Title Linear Mixed Effect Model Efficacy Test}
+\title{Linear Mixed Effect Model Efficacy Test}
 \usage{
 lmmFun4(X_c, Y_c)
 }
@@ -17,7 +17,8 @@ patients in the treatment gorup, K is the number of outcomes, and T is the numbe
 A vector of p-values, length being same as the number of outcomes
 }
 \description{
-Title Linear Mixed Effect Model Efficacy Test
+Evaluates treatment efficacy using linear mixed-effects models for multivariate longitudinal outcomes.
+Returns a vector of p-values for each outcome.
 }
 \examples{
 library(MASS)

@@ -1,4 +1,7 @@
-#' Title Longitudinal Rank Sum Test for Two-Arm Clinical Trial (Placebo and Treatment)
+#' Longitudinal Rank Sum Test for Two-Arm Clinical Trial (Placebo and Treatment)
+#'
+#' Performs a non-parametric rank-based test to compare a treatment group against a placebo
+#' using multivariate longitudinal outcome data. Returns the test statistic, its standard error, and the p-value.
 #'
 #' @param X_c Longitudinal Data for placebo of dimension \eqn{(n_x, K, T)}, where \eqn{n_x} is the number of
 #' patients in the placebo group, K is the number of outcomes, and T is the number of time points
@@ -122,7 +125,10 @@ lrst.2arm = function(X_c,Y_c){
 
 
 
-#' Title Linear Mixed Effect Model Efficacy Test
+#' Linear Mixed Effect Model Efficacy Test
+#'
+#' Evaluates treatment efficacy using linear mixed-effects models for multivariate longitudinal outcomes.
+#' Returns a vector of p-values for each outcome.
 #'
 #' @param X_c Longitudinal Data for placebo of dimension (nx, K, T), where nx is the number of
 #' patients in the placebo gorup, K is the number of outcomes, and T is the number of time points
@@ -191,7 +197,10 @@ lmmFun4 = function(X_c, Y_c){
 }
 
 
-#' Title nparLD Test of Efficacy
+#' Nonparametric Longitudinal Data (nparLD) Test of Efficacy
+#'
+#' Performs a nonparametric analysis of longitudinal outcomes between treatment and placebo groups
+#' using the nparLD approach. Returns p-values for each outcome
 #'
 #' @param X_c Longitudinal Data for placebo of dimension \eqn{(n_x, K, T)}, where \eqn{n_x} is the number of
 #' patients in the placebo gorup, K is the number of outcomes, and T is the number of time points

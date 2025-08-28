@@ -2,7 +2,7 @@
 % Please edit documentation in R/LRSTbase.R
 \name{gen.fun.dep}
 \alias{gen.fun.dep}
-\title{Title Generate Data for Multiple outcomes.}
+\title{Generate Data for Multiple outcomes.}
 \usage{
 gen.fun.dep(xm, xs, corln, Sigma)
 }
@@ -19,7 +19,7 @@ gen.fun.dep(xm, xs, corln, Sigma)
 Longitudinal Data with multiple outcomes
 }
 \description{
-Title Generate Data for Multiple outcomes.
+Simulates repeated measures for multiple outcomes across time points per subject, incorporating outcome correlations and random effects.
 }
 \details{
 This function is used inside a for-loop to simulate repeated measures per subject

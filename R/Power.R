@@ -1,7 +1,8 @@
 library(MASS)
 
-#' Title Theoretical C and D matrix under assumption of Gaussianity
+#'Theoretical C and D matrix under assumption of Gaussianity
 #'
+#'Computes the theoretical covariance matrices 𝐶and𝐷for multivariate longitudinal data under the Gaussianity assumption. These matrices are essential for power calculations in longitudinal rank sum tests.
 #' @param xm Mean Matrix of Placebo
 #' @param ym Mean Matrix of Treatment
 #' @param xs Standard Deviation matrix
@@ -80,7 +81,9 @@ C.gen = function(xm, ym, xs, corr=0.5, n.iter= 1000){
 
 
 
-#' Title Theoretical Power when C and D are known
+#' Theoretical Power when C and D are known
+#'
+#' Calculates the theoretical power of a longitudinal rank sum test when the covariance matrices𝐶and𝐷are known.
 #'
 #' @param alpha Size of the Test
 #' @param effect_size Theoretical Effect Size
@@ -119,7 +122,9 @@ theoretical_power = function(alpha = 0.05, effect_size, nx, ny, K, T, C, D){
 }
 
 
-#' Title Minimum Sample Size required to obtain a given power
+#' Minimum Sample Size required to obtain a given power
+#'
+#' Computes the minimum total sample size required to achieve a given theoretical power for a multivariate longitudinal study using the Gaussianity assumption.
 #'
 #' @param pi Required Power
 #' @param xm Placebo mean matrix of size K * T.
@@ -129,7 +134,7 @@ theoretical_power = function(alpha = 0.05, effect_size, nx, ny, K, T, C, D){
 #' @param D Theoretical D matrix
 #' @param lambda nx/ny where nx and ny are number of patients in the placebo and treatment groups respectively
 #'
-#' @return Minium Sample Size
+#' @return MiniMum Sample Size
 #'
 #' @export
 
@@ -142,7 +147,10 @@ sampSize = function(pi, xm, ym, alpha, C, D, lambda){
 
 
 
-#' Title Theoretical Relative Treatment Effect Size Under Gaussianity Assumption
+#' Theoretical Relative Treatment Effect Size Under Gaussianity Assumption
+#'
+#'Calculates the theoretical relative treatment effect size \eqn{\bar{\theta}} under Gaussianity assumption.
+#'This is the expected difference in ranks between treatment and placebo across all outcomes and time points.
 #'
 #' @param xm Placebo Mean
 #' @param ym Treatment Mean
@@ -187,7 +195,10 @@ theta.bar.theo = function(xm, ym, xs, n.iter = 1000){
 }
 
 
-#' Title Estimate C and D matrix from the data
+#' Estimate C and D matrix from the data
+#'
+#' Estimates the covariance matrices \eqn{\mathbf{C}} and \eqn{\mathbf{D}} from observed longitudinal data.
+#' Useful for data-driven power calculation and test statistics.
 #'
 #' @param X_c Longitudinal Data for placebo of dimension \eqn{(n_x, K, T)}, where \eqn{n_x} is the number of
 #' patients in the placebo group, K is the number of outcomes, and T is the number of time points
@@ -293,7 +304,9 @@ C.gen.hat = function(X_c, Y_c){
 }
 
 
-#' Title Estimate of Power from the data
+#' Estimate of Power from the data
+#'
+#' Estimates the power of the longitudinal rank sum test using observed data instead of theoretical assumptions. Combines ranks and covariance estimation to calculate the test statistic.
 #'
 #' @param alpha Size of Test
 #' @param X_c Longitudinal Data for placebo of dimension (nx, K, T), where nx is the number of

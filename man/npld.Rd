@@ -2,7 +2,7 @@
 % Please edit documentation in R/LRSTuni.R
 \name{npld}
 \alias{npld}
-\title{Title nparLD Test of Efficacy}
+\title{Nonparametric Longitudinal Data (nparLD) Test of Efficacy}
 \usage{
 npld(X_c, Y_c)
 }
@@ -17,7 +17,8 @@ patients in the treatment gorup, K is the number of outcomes, and T is the numbe
 A vector of p-values, length being same as the number of outcomes
 }
 \description{
-Title nparLD Test of Efficacy
+Performs a nonparametric analysis of longitudinal outcomes between treatment and placebo groups
+using the nparLD approach. Returns p-values for each outcome
 }
 \examples{
 library(MASS)

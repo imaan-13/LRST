@@ -1,7 +1,9 @@
 utils::globalVariables(c("Subject", "Treatment", "xm", "xs", "prob", "rt2d"))
 
 
-#' Title Generate Data for Multiple outcomes.
+#'Generate Data for Multiple outcomes.
+#'
+#'Simulates repeated measures for multiple outcomes across time points per subject, incorporating outcome correlations and random effects.
 #'
 #' @param xm A mean matrix with element (i,j) giving the mean of outcome i and time j.
 #' @param xs A s.d. matrix with element (i,j) giving the s.d. of outcome i and time j.
@@ -56,7 +58,9 @@ gen.fun.dep = function(xm, xs, corln, Sigma){
   ar
 }
 
-#' Title Discretize Continuous Data into discrete bins
+#' Discretize Continuous Data into discrete bins
+#'
+#' Converts continuous longitudinal outcomes into discrete bins based on their mean and standard deviation at each time point.
 #'
 #' @param X Longitudinal Data with continuous outcomes
 #'
@@ -105,10 +109,10 @@ discretize = function(X){
   for(k in 1:dim(X)[2]){
     for(i in 2:dim(X)[3]){
       x1 = X[,k,i]
-      x1 = x1%>%
+      x1 = x1|>
         cut(breaks = c(-Inf, xm[k,i] - 3*xs[k,i], xm[k,i] - xs[k,i],
                        xm[k,i] + xs[k,i], xm[k,i] + 3*xs[k,i], Inf),
-            labels = 1:5) %>%
+            labels = 1:5) |>
         `dim<-`(dim(x1))
       x1 = as.numeric(x1)-1
       X1[,k,i] = x1

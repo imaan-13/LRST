@@ -2,7 +2,7 @@
 % Please edit documentation in R/Power.R
 \name{C.gen.hat}
 \alias{C.gen.hat}
-\title{Title Estimate C and D matrix from the data}
+\title{Estimate C and D matrix from the data}
 \usage{
 C.gen.hat(X_c, Y_c)
 }
@@ -17,7 +17,8 @@ patients in the treatment group, K is the number of outcomes, and T is the numbe
 C.hat gives estimated C matrix and D.hat gives estimated D matrix
 }
 \description{
-Title Estimate C and D matrix from the data
+Estimates the covariance matrices \eqn{\mathbf{C}} and \eqn{\mathbf{D}} from observed longitudinal data.
+Useful for data-driven power calculation and test statistics.
 }
 \examples{
 library(MASS)

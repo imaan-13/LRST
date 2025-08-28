@@ -12,11 +12,9 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
   lme4,
-  dplyr,
   tidyr,
   nparLD,
   MASS,
-  roxygen2
 Suggests: 
     knitr,
     rmarkdown,

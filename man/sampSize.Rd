@@ -2,7 +2,7 @@
 % Please edit documentation in R/Power.R
 \name{sampSize}
 \alias{sampSize}
-\title{Title Minimum Sample Size required to obtain a given power}
+\title{Minimum Sample Size required to obtain a given power}
 \usage{
 sampSize(pi, xm, ym, alpha, C, D, lambda)
 }
@@ -22,8 +22,8 @@ sampSize(pi, xm, ym, alpha, C, D, lambda)
 \item{lambda}{nx/ny where nx and ny are number of patients in the placebo and treatment groups respectively}
 }
 \value{
-Minium Sample Size
+MiniMum Sample Size
 }
 \description{
-Title Minimum Sample Size required to obtain a given power
+Computes the minimum total sample size required to achieve a given theoretical power for a multivariate longitudinal study using the Gaussianity assumption.
 }

@@ -1,4 +1,7 @@
-#' Title Longitudinal Rank Sum test for multi-arm Clinical Trial
+#' Longitudinal Rank Sum test for multi-arm Clinical Trial
+#'
+#' Performs a non-parametric U-statistic test to compare multiple treatment arms against a placebo
+#' using multivariate longitudinal outcome data. Returns the test statistic, p-value, and the selected arm.
 #'
 #' @param X_c Longitudinal Data for placebo of dimension \eqn{(n_x, K, T)}, where \eqn{n_x} is the number of
 #' patients in the placebo group, K is the number of outcomes, and T is the number of time points
@@ -10,7 +13,6 @@
 #' \item{p}{The computed p-value}
 #' \item{v}{Proportion of times  higher dose was selected}
 #' \item{T}{Final test Statistic}
-#'
 #' @examples
 #' library(MASS)
 #' xm = -t(cbind(c(0, 0.738, 1.313, 3.109, 4.525, 5.864, 7.338),
@@ -48,7 +50,6 @@
 #' Y[[1]] = X_dose_1
 #' Y[[2]] = X_dose_2
 #' lrst.MultiArm(X_c, Y)
-#'
 #' @references
 #' Ghosh, D., Luo, S. (2024). A non-parametric U-statistic testing approach for multi-arm clinical trials with multivariate longitudinal data. arXiv preprint arXiv:2408.10149.
 #' @export

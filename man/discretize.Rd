@@ -2,7 +2,7 @@
 % Please edit documentation in R/LRSTbase.R
 \name{discretize}
 \alias{discretize}
-\title{Title Discretize Continuous Data into discrete bins}
+\title{Discretize Continuous Data into discrete bins}
 \usage{
 discretize(X)
 }
@@ -13,7 +13,7 @@ discretize(X)
 Longitudinal Data with discretized outcomes
 }
 \description{
-Title Discretize Continuous Data into discrete bins
+Converts continuous longitudinal outcomes into discrete bins based on their mean and standard deviation at each time point.
 }
 \examples{
 library(MASS)

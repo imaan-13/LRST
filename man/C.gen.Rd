@@ -2,7 +2,7 @@
 % Please edit documentation in R/Power.R
 \name{C.gen}
 \alias{C.gen}
-\title{Title Theoretical C and D matrix under assumption of Gaussianity}
+\title{Theoretical C and D matrix under assumption of Gaussianity}
 \usage{
 C.gen(xm, ym, xs, corr = 0.5, n.iter = 1000)
 }
@@ -21,7 +21,7 @@ C.gen(xm, ym, xs, corr = 0.5, n.iter = 1000)
 C: Theoretical C under Gaussianity Assumption, D: Theoretical D under Gaussianity assumption
 }
 \description{
-Title Theoretical C and D matrix under assumption of Gaussianity
+Computes the theoretical covariance matrices 𝐶and𝐷for multivariate longitudinal data under the Gaussianity assumption. These matrices are essential for power calculations in longitudinal rank sum tests.
 }
 \examples{
 xm = -t(cbind(c(0, 0.738, 1.313, 3.109, 4.525, 5.864, 7.338),
