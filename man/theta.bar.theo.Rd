@@ -13,7 +13,11 @@ theta.bar.theo(xm, ym, xs, n.iter = 1000)
 
 \item{xs}{Placebo Standard Deviation}
 
-\item{n.iter}{Number of iteartions}
+\item{n.iter}{Number of iterations}
+}
+\value{
+A numeric scalar giving the theoretical relative treatment effect size
+\eqn{\bar{\theta}} under Gaussianity assumption.
 }
 \description{
 Calculates the theoretical relative treatment effect size \eqn{\bar{\theta}} under Gaussianity assumption.

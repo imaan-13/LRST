@@ -11,7 +11,7 @@ theoretical_power(alpha = 0.05, effect_size, nx, ny, K, T, C, D)
 
 \item{effect_size}{Theoretical Effect Size}
 
-\item{nx}{Number of patients in the plcabo group}
+\item{nx}{Number of patients in the placebo group}
 
 \item{ny}{Number of patients in the treatment group}
 
@@ -21,7 +21,7 @@ theoretical_power(alpha = 0.05, effect_size, nx, ny, K, T, C, D)
 
 \item{C}{Theoretical C matrix}
 
-\item{D}{Theoretica; D matrix}
+\item{D}{Theoretical; D matrix}
 }
 \value{
 Theoretical Power
@@ -31,7 +31,7 @@ Calculates the theoretical power of a longitudinal rank sum test when the covari
 }
 \examples{
 N = 500 # Total Number of Patients
-nx = 2/5*N # Niumber of patients in Placebo
+nx = 2/5*N # Number of patients in Placebo
 ny = 3/5*N # Number of patients in Treatment
 K = 2 # Number of Outcomes
 T = 6 # Number of visits other than baseline

@@ -22,7 +22,7 @@ sampSize(pi, xm, ym, alpha, C, D, lambda)
 \item{lambda}{nx/ny where nx and ny are number of patients in the placebo and treatment groups respectively}
 }
 \value{
-MiniMum Sample Size
+Minimum Sample Size
 }
 \description{
 Computes the minimum total sample size required to achieve a given theoretical power for a multivariate longitudinal study using the Gaussianity assumption.

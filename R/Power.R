@@ -2,7 +2,7 @@ library(MASS)
 
 #'Theoretical C and D matrix under assumption of Gaussianity
 #'
-#'Computes the theoretical covariance matrices 𝐶and𝐷for multivariate longitudinal data under the Gaussianity assumption. These matrices are essential for power calculations in longitudinal rank sum tests.
+#'Computes the theoretical covariance matrices \eqn{\mathbf{C}}and \eqn{\mathbf{D}} for multivariate longitudinal data under the Gaussianity assumption. These matrices are essential for power calculations in longitudinal rank sum tests.
 #' @param xm Mean Matrix of Placebo
 #' @param ym Mean Matrix of Treatment
 #' @param xs Standard Deviation matrix
@@ -87,12 +87,12 @@ C.gen = function(xm, ym, xs, corr=0.5, n.iter= 1000){
 #'
 #' @param alpha Size of the Test
 #' @param effect_size Theoretical Effect Size
-#' @param nx Number of patients in the plcabo group
+#' @param nx Number of patients in the placebo group
 #' @param ny Number of patients in the treatment group
 #' @param K Number of outcomes
 #' @param T Number of Time Points
 #' @param C Theoretical C matrix
-#' @param D Theoretica; D matrix
+#' @param D Theoretical; D matrix
 #'
 #' @return Theoretical Power
 #'
@@ -101,7 +101,7 @@ C.gen = function(xm, ym, xs, corr=0.5, n.iter= 1000){
 #'
 #' @examples
 #' N = 500 # Total Number of Patients
-#' nx = 2/5*N # Niumber of patients in Placebo
+#' nx = 2/5*N # Number of patients in Placebo
 #' ny = 3/5*N # Number of patients in Treatment
 #' K = 2 # Number of Outcomes
 #' T = 6 # Number of visits other than baseline
@@ -134,7 +134,7 @@ theoretical_power = function(alpha = 0.05, effect_size, nx, ny, K, T, C, D){
 #' @param D Theoretical D matrix
 #' @param lambda nx/ny where nx and ny are number of patients in the placebo and treatment groups respectively
 #'
-#' @return MiniMum Sample Size
+#' @return Minimum Sample Size
 #'
 #' @export
 
@@ -155,7 +155,9 @@ sampSize = function(pi, xm, ym, alpha, C, D, lambda){
 #' @param xm Placebo Mean
 #' @param ym Treatment Mean
 #' @param xs Placebo Standard Deviation
-#' @param n.iter Number of iteartions
+#' @param n.iter Number of iterations
+#' @return A numeric scalar giving the theoretical relative treatment effect size
+#'\eqn{\bar{\theta}} under Gaussianity assumption.
 #'
 #' @examples
 #' xm = -t(cbind(c(0, 0.738, 1.313, 3.109, 4.525, 5.864, 7.338),
